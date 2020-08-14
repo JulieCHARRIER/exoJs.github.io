@@ -29,3 +29,49 @@ form.addEventListener("submit", (event) => {
   count = count += 1
   counter.textContent = count;
 });
+
+Highcharts.chart('container', {
+  chart: {
+      type: 'column'
+  },
+  title: {
+      text: 'Nb de réponses par couleur'
+  },
+  subtitle: {
+      text: 'Source: imaginaire'
+  },
+  xAxis: {
+      categories: [
+          'bleu',
+          'rouge',
+          'jaune',
+          'vert',
+          'autre'
+      ],
+      crosshair: true
+  },
+  yAxis: {
+      min: 0,
+      title: {
+          text: 'Nb de réponses'
+      }
+  },
+  tooltip: {
+      headerFormat: '<span style="font-size:14px">{point.key}</span><table>',
+      pointFormat: '<tr><td>{categories.name} </td>' +
+          '<td style="padding:0"><b>{point.y:.0f} </b></td></tr>',
+      footerFormat: '</table>',
+      shared: true,
+      useHTML: true
+  },
+  plotOptions: {
+      column: {
+          pointPadding: 0.2,
+          borderWidth: 0
+      }
+  },
+  series: [{
+      name: 'Réponses',
+      data: [37, 54, 17, 29, 67]
+  }]
+});
