@@ -23,7 +23,7 @@ const counter = document.getElementById("counter");
 let count = 0;
 
 form.addEventListener("submit", (event) => {
-  let input = document.getElementById("user-answer");
+  const input = document.getElementById("user-answer");
   answer = input.value
   message.textContent = createMessage(answer);
   count = count += 1
