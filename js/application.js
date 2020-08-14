@@ -25,7 +25,7 @@ let count = 0;
 form.addEventListener("submit", (event) => {
   const input = document.getElementById("user-answer");
   answer = input.value
-  message.textContent = createMessage(answer);
+  message.innerHTML = createMessage(answer);
   count = count += 1
   counter.textContent = count;
 });
