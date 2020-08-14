@@ -1,0 +1,10 @@
+body {
+  background: goldenrod;
+  text-align: center;
+  font-family: 'La Belle Aurore', cursive;;
+}
+
+#ia-message {
+  font-size: 56px;
+  margin-top: 50px;
+}
